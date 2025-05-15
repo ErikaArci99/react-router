@@ -1,5 +1,8 @@
 import React from 'react'
 import NavBar from './NavBar'
+import { NavLink } from 'react-router-dom'
+import axios from 'axios'
+import { useEffect, useState } from 'react'
 
 const Products = () => {
     return (
