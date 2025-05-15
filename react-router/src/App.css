@@ -54,3 +54,25 @@ body {
   padding: 2rem;
   background: linear-gradient(to bottom, #f2f8fc, #e9f3fb);
 }
+
+/* prodotti */
+
+.products-section {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #f2f8fc, #e9f3fb);
+}
+
+.product-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-img {
+  padding: 1rem;
+  height: 250px;
+  object-fit: contain;
+}

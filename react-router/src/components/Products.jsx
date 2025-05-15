@@ -24,20 +24,35 @@ const Products = () => {
     return (
         <>
             <NavBar />
-            <h1>Products</h1>
-            <div className='products'>
-                {products.map((product) => {
-                    return (
-                        <div className='product' key={product.id}>
-                            <img src={product.image} alt={product.title} />
-                            <h2>{product.title}</h2>
-                            <p>{product.description}</p>
-                            <p>${product.price}</p>
-                            <NavLink to={`/products/${product.id}`}>View Product</NavLink>
-                        </div>
-                    )
-                })}
-            </div>
+            <section className="products-section py-5">
+                <div className="container text-center">
+                    <h1 className="display-4 text-primary mb-5">I nostri prodotti</h1>
+                    <div className="row justify-content-center">
+                        {products.map((product) => (
+                            <div className="col-md-4 mb-4" key={product.id}>
+                                <div className="card product-card h-100 shadow-sm border-0">
+                                    <img
+                                        src={product.image}
+                                        alt={product.title}
+                                        className="card-img-top product-img"
+                                    />
+                                    <div className="card-body d-flex flex-column">
+                                        <h5 className="card-title">{product.title}</h5>
+                                        <p className="card-text text-muted">{product.description}</p>
+                                        <p className="fw-bold">${product.price}</p>
+                                        <NavLink
+                                            to={`/products/${product.id}`}
+                                            className="btn btn-outline-primary mt-auto"
+                                        >
+                                            Scopri di più
+                                        </NavLink>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
         </>
     )
 }
