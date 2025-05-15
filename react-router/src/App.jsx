@@ -4,6 +4,7 @@ import './App.css'
 import Homepage from './components/Homepage'
 import AboutUs from './components/AboutUs'
 import Products from './components/Products'
+import Contacts from './components/Contacts'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" Component={Homepage} />
           <Route path="/aboutus" Component={AboutUs} />
           <Route path="/products" Component={Products} />
+          <Route path="/contacts" Component={Contacts} />
         </Routes>
       </BrowserRouter>
     </>

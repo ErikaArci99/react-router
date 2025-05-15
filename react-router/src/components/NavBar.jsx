@@ -14,6 +14,10 @@ const links = [
         path: '/aboutus',
         label: 'Su Di Noi',
     },
+    {
+        path: '/contacts',
+        label: 'Contattaci',
+    },
 ]
 
 const NavBar = () => {
