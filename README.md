@@ -11,3 +11,5 @@ Numero minimo di push: 8/9
 Bonus
 Gestire la classe active
 Buon Lavoro!
+
+ESERCIZIO TERMINATO
