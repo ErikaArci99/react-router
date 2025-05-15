@@ -46,3 +46,11 @@ body {
   padding: 2rem;
   background: linear-gradient(to bottom, #f2f8fc, #e9f3fb);
 }
+
+/* contacts */
+
+.contacts-section {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(to bottom, #f2f8fc, #e9f3fb);
+}
