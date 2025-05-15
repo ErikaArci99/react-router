@@ -7,6 +7,7 @@ body {
   background: linear-gradient(to right, #e0f0ff, #cce5ff);
   border-radius: 0 0 16px 16px;
   padding: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .custom-link {
@@ -15,6 +16,21 @@ body {
   padding: 0.5rem 1rem;
   border-radius: 999px;
   transition: all 0.3s ease;
+  position: relative;
+  text-decoration: none;
+}
+
+.custom-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #0056b3;
+  transition: width 0.3s ease;
+  border-radius: 2px;
 }
 
 .custom-link:hover {
@@ -24,11 +40,19 @@ body {
   text-decoration: none;
 }
 
+.custom-link:hover::after {
+  width: 60%;
+}
+
 .custom-link-active {
   background-color: #0d6efd;
   color: white;
   font-weight: 700;
   box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+}
+
+.custom-link-active::after {
+  width: 60%;
 }
 
 /* homepage */
@@ -37,6 +61,24 @@ body {
   min-height: 100vh;
   padding: 2rem;
   background: linear-gradient(to bottom, #f2f8fc, #e9f3fb);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.homepage-header h1 {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  color: #1864ab;
+}
+
+.homepage-header p {
+  color: #495057;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
 }
 
 /* about us */
@@ -45,6 +87,23 @@ body {
   min-height: 100vh;
   padding: 2rem;
   background: linear-gradient(to bottom, #f2f8fc, #e9f3fb);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.aboutus-section h1 {
+  color: #1864ab;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.aboutus-section p {
+  max-width: 700px;
+  color: #495057;
+  font-size: 1.1rem;
 }
 
 /* contacts */
@@ -53,6 +112,23 @@ body {
   min-height: 100vh;
   padding: 2rem;
   background: linear-gradient(to bottom, #f2f8fc, #e9f3fb);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contacts-section h1 {
+  color: #1864ab;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.contacts-section p {
+  max-width: 700px;
+  color: #495057;
+  font-size: 1.1rem;
 }
 
 /* prodotti */
@@ -60,19 +136,61 @@ body {
 .products-section {
   min-height: 100vh;
   background: linear-gradient(to bottom, #f2f8fc, #e9f3fb);
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
 }
 
 .product-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
 }
 
 .product-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .product-img {
   padding: 1rem;
   height: 250px;
   object-fit: contain;
+  border-bottom: 1px solid #e3e9f1;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+/* Pulsanti e link prodotti */
+
+.product-card h2 {
+  color: #1864ab;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.product-card p {
+  color: #495057;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.product-card a {
+  color: #0d6efd;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.product-card a:hover {
+  color: #0056b3;
+  text-decoration: underline;
 }
