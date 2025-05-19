@@ -5,6 +5,7 @@ import Homepage from './components/Homepage'
 import AboutUs from './components/AboutUs'
 import Products from './components/Products'
 import Contacts from './components/Contacts'
+import { SingleProduct } from './components/SingleProduct'
 
 function App() {
 
