@@ -194,3 +194,18 @@ body {
   color: #0056b3;
   text-decoration: underline;
 }
+
+/* prodotti singoli */
+
+.product-img {
+  height: 300px;
+  object-fit: contain;
+}
+
+.single-product-card {
+  transition: transform 0.3s ease;
+}
+
+.single-product-card:hover {
+  transform: scale(1.02);
+}

@@ -23,16 +23,24 @@ const SingleProduct = () => {
 
 
     return (
-        <div className="container">
-            <div className="row">
-                <div className="col-12">
-                    <div>Dettaglio prodotto</div>
+        <div className="container py-5">
+            <div className="row justify-content-center">
+                <div className="col-12 text-center mb-4">
+                    <h1 className="display-5 text-primary">Dettaglio Prodotto</h1>
                 </div>
-                <div className="col-12">
-                    <img src={product.image} alt="" />
-                    <h2>{product.title}</h2>
-                    <p>{product.price}</p>
-                    <p>{product.description}</p>
+                <div className="col-md-8 col-lg-6">
+                    <div className="card shadow-sm border-0 single-product-card">
+                        <img
+                            src={product.image}
+                            alt={product.title}
+                            className="card-img-top product-img p-4"
+                        />
+                        <div className="card-body text-center">
+                            <h3 className="card-title mb-3">{product.title}</h3>
+                            <p className="text-muted">{product.description}</p>
+                            <h4 className="text-success fw-bold">${product.price}</h4>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

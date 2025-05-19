@@ -29,7 +29,12 @@ const Products = () => {
                     <h1 className="display-4 text-primary mb-5">I nostri prodotti</h1>
                     <div className="row justify-content-center">
                         {products.map((product) => (
-                            <div className="col-md-4 mb-4" key={product.id}>
+                            <div
+                                className="col-md-4 mb-4"
+                                key={product.id}
+                                onClick={() => window.location.href = `/products/${product.id}`}
+                                style={{ cursor: 'pointer' }}
+                            >
                                 <div className="card product-card h-100 shadow-sm border-0">
                                     <img
                                         src={product.image}
@@ -43,6 +48,7 @@ const Products = () => {
                                         <NavLink
                                             to={`/products/${product.id}`}
                                             className="btn btn-outline-primary mt-auto"
+                                            onClick={e => e.stopPropagation()}
                                         >
                                             Scopri di più
                                         </NavLink>
