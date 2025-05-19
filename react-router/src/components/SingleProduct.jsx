@@ -23,7 +23,19 @@ const SingleProduct = () => {
 
 
     return (
-        <div>SingleProduct</div>
+        <div className="container">
+            <div className="row">
+                <div className="col-12">
+                    <div>Dettaglio prodotto</div>
+                </div>
+                <div className="col-12">
+                    <img src={product.image} alt="" />
+                    <h2>{product.title}</h2>
+                    <p>{product.price}</p>
+                    <p>{product.description}</p>
+                </div>
+            </div>
+        </div>
     )
 }
 
